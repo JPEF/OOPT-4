@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="strategyUML">
+  <ClassDiagramComponents>
+    <Class name="Mainclass" package="" visibility="public" xPosition="6.0" yPosition="26.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Character" package="" visibility="public" isAbstract="true" xPosition="365.0" yPosition="26.0">
+      <Fields>
+        <Field name="weapon" type="WeaponBehavior" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="WeaponBehavior" name="w"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="fight" returnType="void" visibility="public"/>
+        <Method name="setWeapon" returnType="void" visibility="public">
+          <Argument type="WeaponBehavior" name="w"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="King" package="" visibility="public" xPosition="660.0" yPosition="277.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fight" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Knight" package="" visibility="public" xPosition="733.0" yPosition="133.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fight" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Queen" package="" visibility="public" xPosition="133.0" yPosition="282.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fight" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Troll" package="" visibility="public" xPosition="65.0" yPosition="158.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="fight" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClubBehavior" package="" visibility="public" xPosition="118.0" yPosition="458.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="useWeapon" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SwordBehavior" package="" visibility="public" xPosition="291.0" yPosition="458.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="useWeapon" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AxeBehavior" package="" visibility="public" xPosition="481.0" yPosition="458.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="useWeapon" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="KnifeBehavior" package="" visibility="public" xPosition="660.0" yPosition="458.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="useWeapon" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="WeaponBehavior" package="" visibility="public" xPosition="379.0" yPosition="288.0">
+      <Methods>
+        <Method name="useWeapon" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Mainclass" target="Character" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <HasRelation name="has" source="Character" target="WeaponBehavior" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Knight" target="Character"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="SwordBehavior" target="WeaponBehavior"/>
+    <IsRelation name="is" source="King" target="Character"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ClubBehavior" target="WeaponBehavior"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="AxeBehavior" target="WeaponBehavior"/>
+    <IsRelation name="is" source="Queen" target="Character"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="KnifeBehavior" target="WeaponBehavior"/>
+    <IsRelation name="is" source="Troll" target="Character"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
